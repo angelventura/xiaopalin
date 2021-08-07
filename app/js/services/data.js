@@ -9,6 +9,9 @@ const SINGLETON=class Data  {
     constructor(){        
     }    
 
+    getWordList(name=null){
+        return this.getWords();
+    }
 
     getWords(){
         return require('../data/words');

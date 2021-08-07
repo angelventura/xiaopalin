@@ -1,6 +1,6 @@
 {
-  "name": "Xiao Palin",
-  "version": "1.0.1",
+  "name": "XiaoPalin",
+  "version": "1.0.0",
   "description": "Chinese learning site",
   "main": "index.js",
   "directories": {
@@ -46,7 +46,6 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "fs": "0.0.1-security",
-    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-chug": "^0.5.1",
     "gulp-clean-css": "^4.3.0",
@@ -96,6 +95,7 @@
     "expanding-textareas": "^1.0.2",
     "fomantic-ui": "^2.8.7",
     "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
     "htmlclean": "^3.0.8",
     "jquery": "^3.1.1",
     "js-cookie": "^2.2.0",

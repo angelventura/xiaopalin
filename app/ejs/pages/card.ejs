@@ -1,0 +1,45 @@
+<% id = PAGE_ID,
+   menu = MENU_ID,
+   title= "Title",
+   subtitle = "subtitle.",
+   mdfilename = __filename
+   ;
+   
+%><% include ('../templates/partials/page-header-reload.ejs') %>
+
+<div class="ui column centered grid">
+  <div class="twelve wide column">
+    <div id="<%- id -%>-content">
+
+<!-- Card -->
+<div class="ui card">
+  <div class="image">
+    <img src="<%- meta.IMG_PATH %>/data/pengyou.png">
+  </div>
+  <div class="content">
+    <div class="ui header center-text huge">朋友</div>
+
+    <div class="ui meta center-text ">
+      <a> <i class="volume up icon"></i>Péngyǒu </a>
+    </div>
+
+  </div>
+  <div class="extra content">
+    <div>
+      <i class="es flag"></i> Amigo <i class="volume up icon"></i>
+    </div>
+
+    <div>
+      <i class="fr flag"></i> Ami <i class="volume up icon"></i>
+    </div>
+
+  </div>
+</div>
+<!-- Card End -->
+
+
+
+
+    </div>
+  </div>
+</div>

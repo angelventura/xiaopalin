@@ -2589,6 +2589,12 @@ var SINGLETON = /*#__PURE__*/function () {
   }
 
   _createClass(Data, [{
+    key: "getWordList",
+    value: function getWordList() {
+      var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+      return this.getWords();
+    }
+  }, {
     key: "getWords",
     value: function getWords() {
       return require('../data/words');
