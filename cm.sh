@@ -98,8 +98,8 @@ function gitCommit(){
         test "$?" "git commit";
     fi
         
-    git push origin master;
-    test "$?" "git push origin master";
+    git push origin main;
+    test "$?" "git push origin main";
 
     end "$MSG";
 
