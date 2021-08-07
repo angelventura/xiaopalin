@@ -1,0 +1,52 @@
+<% include ('./../pages/MENU.ejs') %>
+
+<!-- <div id="left-menu" class="ui rail visible"> -->
+<div id="left-menu" class="ui sticky fixed top">
+  <div class="button compact icon tiny ui sidebar-button" style="display:none;"><i class="icon"></i></div>
+  <div>
+	<% MENU.forEach(  ( menu, index) => { %>
+	<!-- partial.menu.js-->
+    <div class="ui vertical following fluid accordion menu" id="vertical-menu-<%- menu.id -%>" style="display:none;">
+	  
+	  <% if (menu.noLink === true) { %>
+	  <div class="active inverted item <%- menu.color -%>">
+        <%- menu.label -%>
+      </div>
+	  <% } else { %>
+	  <a href="<%- meta.ROOT_PATH %>/<%- menu.id -%>.html" class="active inverted item <%- menu.color -%>">
+        <%- menu.label -%>
+      </a>
+	  <% } %>
+		
+		
+		
+		<% menu.childs && menu.childs.forEach(  ( menu, index) => { %>
+		
+		<div class="item">
+
+		  <% if (menu.noLink === true) { %>
+		    <div class="title" id="<%- menu.id -%>"><%- (menu.childs)? "<i class='dropdown icon'></i>":"" -%> <b><%- menu.label -%></b></div>
+
+		  <% } else { %>
+		    <a href="<%- meta.ROOT_PATH %>/<%- menu.id -%>.html" class="title" id="<%- menu.id -%>"><%- (menu.childs)? "<i class='dropdown icon'></i>":"" -%> <b><%- menu.label -%></b></a>
+		  <% } %>
+
+		  <div class="content menu">
+			
+			<% menu.childs &&  menu.childs.forEach(  ( menu, index) => { %>
+			<a class="item" id="menu-item-<%- menu.id -%>" href="<%- menu.id -%>.html" href="#why-use-grids"><%- menu.label -%></a>
+			<% }); %>
+			
+		  </div>
+		</div>
+		
+	  
+		<% }); %>
+		
+      </div>
+	  
+	  <% }); %>
+	  	  
+  </div>	  
+</div>
+

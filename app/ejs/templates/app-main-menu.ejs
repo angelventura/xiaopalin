@@ -1,0 +1,57 @@
+<% include ('./../pages/MENU.ejs') %>
+<!-- Menu -->
+<div class="ui fixed inverted main menu" style="height:54px;">
+    
+    <a class="launch item">
+      <i class="content icon"></i><%- package.name %>
+    </a>
+
+    <div class="title item system-status-current-server" style="width:95px;">
+      
+    </div>
+
+	<% MENU.forEach(  ( menu, index) => { %>
+    <a href="<%- meta.ROOT_PATH %>/<%- menu.id -%>.html" id="menu-<%- menu.id -%>" class="inverted item <%- menu.color -%>"><%- menu.label -%></a>
+	<% }); %>
+
+	<!-- Right Menu-->
+    <div class="right menu">
+      <!--
+      <a href="/index.html" class="inverted item orange">Servers &nbsp;<i class="server icon"></i></a>
+      -->
+      
+      <a class="item server-icon-popup">
+      </a>
+
+      <div id="server-list-menu"
+           class="ui fluid popup bottom center transition hidden"
+           style="width: 820px;">
+      </div>
+
+
+      <!--
+      <select class="ui dropdown item servers-dropdown" id="select">
+        <option value=""></option>
+      </select>
+      -->
+      
+      <!-- Logout Button  -->
+      <div class="ui button tiny item ">
+        <div id="logout-menu" class="ui button tiny circular negative" style="display:none;">
+          <i class="power icon"></i>Logout
+        </div>        
+      </div>
+
+      <!-- Logout Button  -->
+      <div class="ui button tiny item ">
+        <div id="login-menu" class="ui button tiny circular teal" style="display:none;">
+          <i class="power icon"></i>Login
+        </div>        
+      </div>
+
+	  
+    </div>
+    <!-- End Right Menu-->
+        
+</div>
+

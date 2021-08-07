@@ -1,0 +1,87 @@
+/*  -*- css -*- */
+
+/* https://css-tricks.com/the-sass-ampersand/ */
+
+$btn-bkg: #F3F4F5; 
+$closeable-element-bkg: #FFFFFF;
+
+$animation-time: .3;
+
+/* $btn-bkg: darken(#F3F4F5, 10%); */
+
+/**
+ * Closing the elements
+ */
+.closeable-closed {
+    .closeable-element {    
+        /* display: none;  */
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s $animation-time, opacity $animation-time  ease-in-out;
+    }
+
+    div.closeable-element {
+        margin-top: -1000000px !important;
+        transition: margin-top 0s $animation-time;
+    }
+}
+
+.closeable-element {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $animation-time ease-in-out;
+}
+
+/* Migration GULP4
+0% {
+    -webkit-transform: translate3d(0,-100%,0);
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+}
+
+100% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
+}
+*/
+
+/*
+.closeable-element {    
+    &:hover {
+        background: darken($closeable-element-bkg, 2%) !important;
+    }
+}    
+*/
+
+.closeable {
+   min-height: 60px; 
+}
+
+/**
+ * Setting the button to open close
+ */
+.closeable-button {
+    cursor: pointer;
+    min-height: 30px;
+    
+    &:hover {
+        background: darken($btn-bkg, 1%) !important;
+    }
+}
+
+
+.closeable-button:before {
+    /*  content: "\25AE";  this is your text. You can also use UTF-8 character codes as I do here */
+    content: "\f146";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.closeable-closed {
+    .closeable-button:before {    
+        content: "\f0fe" !important;
+    }    
+}

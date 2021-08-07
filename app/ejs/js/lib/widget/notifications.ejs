@@ -1,0 +1,8 @@
+<ul class="list">
+  <li>{{text}}</li>
+  {{#err}}
+  {{#statusText}}<li><b>Status:</b> {{.}}</li>{{/statusText}}
+  {{#responseText}}<li><b>Message:</b> {{.}}</li>{{/responseText}}
+  {{#url}}<li><b>Url:</b> {{.}}</li>{{/url}}
+  {{/err}}
+</ul>

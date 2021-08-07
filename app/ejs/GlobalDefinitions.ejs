@@ -1,0 +1,169 @@
+<% // -*- javascript -*-
+
+render={};
+
+
+if (global.isProd) {
+
+} else {
+	meta.ROOT_PATH="";
+//	meta.EXTERNAL_SERVICES_URL="/ext-prod";
+}
+
+// Do the html clean
+render.includeHtml=function(fileName,obj){
+	var html=include(fileName,obj);
+
+	return htmlclean(html);
+};
+
+// Include the html into js code
+render.includeHtmlJs=function(fileName){
+	var html=render.includeHtml(fileName);
+	html=html.replace(/"/g, '\\"');
+	html=html.replace(/'/g, "\\'");
+
+	return html;
+};
+
+// Include the html into js code
+render.htmlToJs=function(html){
+	html=htmlclean(html);
+	html=html.replace(/"/g, '\\"');
+	html=html.replace(/'/g, "\\'");
+
+	return html;
+};
+
+// To be used with the new ie6 template string
+// Ex: r.ip(` ${id} `)
+render.inlinePartial=function(html){
+	html=html.replace(/"/g, '\\"');
+	html=html.replace(/'/g, "\\'");
+	html=htmlclean(html);
+	return html;
+};
+
+render.partial=function(name){
+ 	return render.includeHtmlJs(name);
+};
+
+r={};
+
+
+
+// To be used with the new ie6 template string
+// Ex: r.ip(` ${id} `)
+r.ip=function(html){
+	return render.inlinePartial(html);;
+};
+
+r.jspHeader=function(){
+	return r.jspSnippet("page-header.ejs");
+}
+r.jspFooter=function(){
+	return r.jspSnippet("page-footer.ejs");
+}
+
+r.jspSnippet=function(file){
+	if (config.JSP) {
+		return include(PROJECT_ROOT+'/app/ejs/templates/jsp/'+file);
+	} else {
+		return "<!-- JSP to be included here: "+file+" -->";
+	}		  				
+};	
+
+r.getAjaxUrl=function(name,variant){
+    return "'"+meta.EXTERNAL_SERVICES_URL+"/"+name+"'";
+
+};	
+
+r.getAjaxIdUrl=function(name,id,useExternalService){
+	return "'"+meta.EXTERNAL_SERVICES_URL+"/"+name+"/'+"+id;
+};	
+
+
+r.jspAlt=function(jspText,altTex){
+	if (config.JSP) {
+		return jspText;
+	} else {
+		return altTex;
+	}		  				
+};
+
+r.getFileId=function(filePath){
+    const fileName=filePath.split(/[\\/]/).pop();
+    try {
+        return fileName.split('.').slice(0, -1).join('.');
+    } catch(err){
+        return fileName;
+    }
+}
+
+// Do the html clean
+r.markdown=function(file){
+    var fileName = file.replace(/^.*[\\\/]/, '');
+    var fileId;
+    var index=fileName.lastIndexOf(".");
+
+    if (index>0){
+        fileId=fileName.substr(0, index);
+    } else {
+        fileId=fileName;
+    }
+        
+    file = PROJECT_ROOT+"/app/md/"+ fileId + ".md";
+
+    try {
+        // const fileName=r.getFileId(filePath)+".md";
+
+	    const md=include(file);
+        const html=markdown.render(md);
+        
+	    return htmlclean(html);
+    }catch(err){
+        console.error("++ ");
+        console.error("++ File:"+file+" , Error:"+err);
+        console.error("++ ");
+        return "";
+    }
+};
+
+
+/**
+* Handlebars
+*/
+
+if (typeof handlebars === 'undefined'){
+    throw "Handlebars is not defined, please add into the ejs context.";
+}
+
+r.TEMPLATES={};
+r.TEMPLATES_TIME={};
+
+handlebars.registerHelper('stringify', function(content) {
+	return JSON.stringify(content,null,4);
+});
+
+r.display=function(fileName,data){
+
+    const path=PROJECT_ROOT+"/app/ejs/ejs-templates/"+fileName+".ejs";
+    const stats = fs.statSync(path)
+    const time=stats.mtime
+
+    let template=r.TEMPLATES[fileName];
+    let oldTime=r.TEMPLATES_TIME[fileName];
+
+    if (!template || time>oldTime ){
+        const content=render.includeHtml(path);
+        template=handlebars.compile(content);
+        r.TEMPLATES[fileName]=template;
+        r.TEMPLATES_TIME[fileName]=time;
+    } 
+
+    return template(data);
+};
+
+
+
+%>

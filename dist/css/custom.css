@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/*  -*- css -*- */
+/* https://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
+pre {
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+/*  -*- css -*- */
+/* Pusher Button*/
+.sidebar-button {
+  float: right;
+  position: relative;
+  top: 14px;
+  right: -23px;
+  height: 66px;
+  z-index: -2;
+  border: 1px #f2711c solid !important;
+  background: rgba(247, 192, 155, 0.42) !important;
+  padding-right: 4px !important;
+}
+
+.sidebar-button i:before {
+  content: "";
+}
+
+.left-menu .sidebar-button i:before {
+  content: "";
+}
+
+/* Left Menu*/
+.left-menu #left-menu {
+  left: 0px;
+}
+
+#left-menu {
+  margin-bottom: 0px;
+  left: -200px;
+  top: 60px;
+  width: 200px;
+  height: 652px;
+  transition-duration: 0.2s;
+  transition-property: left;
+}
+
+/* The view Wrapper */
+.left-menu #view-wrapper {
+  margin-left: 240px;
+}
+
+#view-wrapper {
+  margin-top: 54px;
+  margin-left: 24px;
+  transition-duration: 0.2s;
+  transition-property: all;
+}
+
+/*  -*- css -*- */
+/* https://css-tricks.com/the-sass-ampersand/ */
+/* $btn-bkg: darken(#F3F4F5, 10%); */
+/**
+ * Closing the elements
+ */
+.closeable-closed .closeable-element {
+  /* display: none;  */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3, opacity 0.3 ease-in-out;
+}
+.closeable-closed div.closeable-element {
+  margin-top: -1000000px !important;
+  transition: margin-top 0s 0.3;
+}
+
+.closeable-element {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3 ease-in-out;
+}
+
+/* Migration GULP4
+0% {
+    -webkit-transform: translate3d(0,-100%,0);
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+}
+
+100% {
+    -webkit-transform: translateZ(0);
+    opacity: 1;
+    transform: translateZ(0);
+}
+*/
+/*
+.closeable-element {    
+    &:hover {
+        background: darken($closeable-element-bkg, 2%) !important;
+    }
+}    
+*/
+.closeable {
+  min-height: 60px;
+}
+
+/**
+ * Setting the button to open close
+ */
+.closeable-button {
+  cursor: pointer;
+  min-height: 30px;
+}
+.closeable-button:hover {
+  background: #f0f1f3 !important;
+}
+
+.closeable-button:before {
+  /*  content: "\25AE";  this is your text. You can also use UTF-8 character codes as I do here */
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.closeable-closed .closeable-button:before {
+  content: "" !important;
+}

@@ -1,0 +1,131 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="es" id="index" data-menu="index">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Xiao Palin</title>
+
+
+<!-- Semantic-UI  -->
+<link href="./vendors/semantic-ui/semantic.css" rel="stylesheet">
+
+<!-- @fortawesome/fontawesome-free -->
+<link rel="stylesheet" href="./vendors/fontawesome-free/css/all.min.css" />
+
+
+<!-- Application Specific CSS -->
+<link href="./css/custom.css" rel="stylesheet">
+
+    <script src="./vendors/jquery/jquery.js"></script>
+
+<script src="./vendors/semantic-ui/semantic.js"></script>
+
+<script src="./vendors/moment/moment.min.js"></script>
+
+
+<!-- Main Javascript -->
+<script src="./js/bundle.js"></script>
+
+  </head>
+  
+  <body class="">
+    
+    
+<!-- Menu -->
+<div class="ui fixed inverted main menu" style="height:54px;">
+    
+    <a class="launch item">
+      <i class="content icon"></i>Xiao Palin
+    </a>
+
+    <div class="title item system-status-current-server" style="width:95px;">
+      
+    </div>
+
+	
+
+	<!-- Right Menu-->
+    <div class="right menu">
+      <!--
+      <a href="/index.html" class="inverted item orange">Servers &nbsp;<i class="server icon"></i></a>
+      -->
+      
+      <a class="item server-icon-popup">
+      </a>
+
+      <div id="server-list-menu"
+           class="ui fluid popup bottom center transition hidden"
+           style="width: 820px;">
+      </div>
+
+
+      <!--
+      <select class="ui dropdown item servers-dropdown" id="select">
+        <option value=""></option>
+      </select>
+      -->
+      
+      <!-- Logout Button  -->
+      <div class="ui button tiny item ">
+        <div id="logout-menu" class="ui button tiny circular negative" style="display:none;">
+          <i class="power icon"></i>Logout
+        </div>        
+      </div>
+
+      <!-- Logout Button  -->
+      <div class="ui button tiny item ">
+        <div id="login-menu" class="ui button tiny circular teal" style="display:none;">
+          <i class="power icon"></i>Login
+        </div>        
+      </div>
+
+	  
+    </div>
+    <!-- End Right Menu-->
+        
+</div>
+
+
+    <div id="content-wrapper" class="main container">
+      
+      <div class="row">
+
+        
+
+<!-- <div id="left-menu" class="ui rail visible"> -->
+<div id="left-menu" class="ui sticky fixed top">
+  <div class="button compact icon tiny ui sidebar-button" style="display:none;"><i class="icon"></i></div>
+  <div>
+	
+	  	  
+  </div>	  
+</div>
+
+
+        <div id="view-wrapper" class="column">
+
+          <div class="ui column centered grid"><div class="twelve wide column"><div id="index-content">Sparta</div></div><div class="four wide column"><pre id="index-json"></pre></div></div>          
+        </div>
+      </div>      
+    </div>
+    
+  </body>  
+</html>
+

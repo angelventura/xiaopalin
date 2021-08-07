@@ -1,0 +1,24 @@
+{
+	"LANG":"es",
+
+	"APPLICATION_TITLE":"Xiao Palin",	
+	"PROJECT_YEAR":"2021",
+	"PROJECT_NAME":"Xiao Palin",
+	"PROJECT_VERSION":"v0.0",
+	"PROJECT_AUTOR":"Angel Ventura",
+
+	"TITLE":"XiaoPalin",
+	"DESCRIPTION":"XiaoPalin",
+	"KEYWORDS":"XiaoPalin",
+	"AUTHOR":"Angel Ventura",
+
+    "ROOT_PATH":"/",
+
+	"CSS_PATH":"./css",
+	"JS_PATH":"./js",
+	"IMG_PATH":"./img",
+	"VENDORS_PATH":"./vendors",
+	"AJAX_PATH":"/ajax-path",
+	"EXTERNAL_SERVICES_URL":"../ext-prod"
+	
+}

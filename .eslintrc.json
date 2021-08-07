@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+
+    "rules": {
+        "max-len": ["warn", { "code": 125 }],
+        "indent": ["warn", 4 ,{ "SwitchCase": 1 }],
+        "no-unused-vars": "warn",
+        "space-before-function-paren":"off",
+        "eol-last":"off",
+        "func-names":"off"
+    },
+    "plugins": [
+        "@angelventura/eslint-plugin-ejs"
+    ]
+}

@@ -1,0 +1,17 @@
+<% id = PAGE_ID,
+   menu = MENU_ID,
+   title= "Console",
+   subtitle = "This console has been designed for administrative purposes. Use the server selector in the to menu bar to select the current server.",
+   mdfilename = __filename
+   ;
+   
+%><% include ('../templates/partials/page-header-reload.ejs') %>
+
+<div class="ui column centered grid">
+  <div class="twelve wide column">
+    <div id="<%- id -%>-content">Sparta</div>
+  </div>
+  <div class="four wide column">
+    <pre id="<%- id -%>-json"></pre>
+  </div>
+</div>

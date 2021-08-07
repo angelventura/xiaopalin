@@ -1,0 +1,74 @@
+/*  -*- css -*- */
+
+$transition-duration: 0.2s;
+
+/* Pusher Button*/
+.sidebar-button {
+    float: right;
+    position: relative;
+    top: 14px;
+    right: -23px;
+    height: 66px;
+    z-index: -2;
+    //    background: #f3f3f3 !important;
+    border: 1px #f2711c solid !important;
+    background: rgba(247, 192, 155, 0.42) !important;
+    padding-right: 4px !important;
+}
+
+.sidebar-button i:before {    
+    content: "\f101";
+//    font-family: 'Icons';
+//    color:green;
+}
+
+// angle double left icon
+.left-menu .sidebar-button i:before {
+    content: "\f100";
+//    color:red;
+//    font-family: 'Icons';
+//    content: "\f063" !important;
+
+}
+
+/* Left Menu*/
+.left-menu #left-menu {
+//    color: green;
+//    background:green;
+//    width: 206px;
+    
+//    display: inherit;
+
+    left: 0px;
+
+}
+
+#left-menu {
+    // display: none;
+
+    margin-bottom: 0px;
+    left: -200px;
+    top: 60px;
+    width: 200px;
+    height: 652px;
+
+    transition-duration: $transition-duration;
+    transition-property: left;
+}
+
+/* The view Wrapper */
+.left-menu #view-wrapper {
+//    color: red;
+//    background:red;
+    margin-left: 240px;
+}
+
+#view-wrapper {
+    // margin-top: 108px;
+    margin-top: 54px;
+    margin-left: 24px;
+
+    transition-duration: $transition-duration;
+    transition-property: all;
+
+}
