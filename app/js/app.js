@@ -27,6 +27,8 @@ var INTERFACE={
 
 Register.registerModule(INTERFACE,"index",require('./view//index'));
 Register.registerModule(INTERFACE,"data",require('./services//data'));
+Register.registerModule(INTERFACE,"play-sound",require('./partial//play-sound'));
+Register.registerModule(INTERFACE,"xiao-partial",require('./partial//xiao-partial'));
 Register.registerModule(INTERFACE,"display-helpers",require('./lib/partial//display-helpers'));
 Register.registerModule(INTERFACE,"display-partials",require('./lib/partial//display-partials'));
 Register.registerModule(INTERFACE,"closeable-partial",require('./lib/partial//closeable-partial'));

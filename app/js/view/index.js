@@ -18,7 +18,7 @@ const AbstractRefreshTab = require('../lib/view/abstract-refresh-tab');
 let SINGLETON = new AbstractRefreshTab("index");
 
 const id="index";
-const template = "<div class=\"row form ui\"><h2> Token Information</h2></div> {{>json-closeable}}";
+const template = "<div class=\"row form ui\"><h2> >word-card this</h2></div> {{#each this}} {{>word-card this}} {{/each}}<div class=\"row form ui\"><h2> word-card this</h2></div> {{#each this}} {{{word-card this}}} {{/each}} {{>json-closeable}}";
 
 SINGLETON.initialize=function(){
     return Display.compile(id,template);

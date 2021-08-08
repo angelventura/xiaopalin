@@ -17,6 +17,7 @@
 	"CSS_PATH":"./css",
 	"JS_PATH":"./js",
 	"IMG_PATH":"./img",
+	"SOUND_PATH":"./img",
 	"VENDORS_PATH":"./vendors",
 	"AJAX_PATH":"/ajax-path",
 	"EXTERNAL_SERVICES_URL":"../ext-prod"

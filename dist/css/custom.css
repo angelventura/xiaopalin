@@ -139,3 +139,7 @@ pre {
 .center-text {
   text-align: center;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}

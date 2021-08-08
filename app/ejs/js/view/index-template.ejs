@@ -1,7 +1,23 @@
 <div class="row form ui">  
   <h2>
-    Token Information
+    >word-card this
   </h2>
 </div>
+
+
+{{#each this}}
+{{>word-card this}}
+{{/each}}
+
+<div class="row form ui">  
+  <h2>
+    word-card this
+  </h2>
+</div>
+
+{{#each this}}
+{{{word-card this}}}
+{{/each}}
+
 
 {{>json-closeable}}

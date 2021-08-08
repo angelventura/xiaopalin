@@ -33,6 +33,9 @@ var INTERFACE={
         { name:"data",path:"./services/" },
 
         // Partals
+        { name:"play-sound",path:"./partial/"},
+        { name:"xiao-partial",path:"./partial/"},
+
         { name:"display-helpers",path:"./lib/partial/"},
         { name:"display-partials",path:"./lib/partial/"},
         { name:"closeable-partial",path:"./lib/partial/"},    

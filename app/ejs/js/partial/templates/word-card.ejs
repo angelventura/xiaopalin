@@ -1,0 +1,22 @@
+<!-- Card -->
+<div class="ui card">
+  <div class="image">
+    <img src="{{>img-src . }}" onerror="this.onerror=null; this.src='<%- meta.IMG_PATH %>/data/default.png'">
+  </div>
+  <div class="content">
+    <div class="ui header center-text huge">{{char}}</div>
+
+    <div class="ui meta center-text capitalize">
+      <a class="play" data-id="{{id}}" > <i class="volume up icon"></i> {{pinyin}} </a>
+    </div>
+
+  </div>
+  <div class="extra content">
+    {{#each lang}}
+    <div class="capitalize">
+      <i class="{{@key}} flag"></i> <i class="volume up icon play" data-id="{{id}}-{{@key}}" data-lang="{{@key}}"></i>{{this}}
+    </div>
+    {{/each}}
+  </div>
+</div>
+<!-- Card End -->
