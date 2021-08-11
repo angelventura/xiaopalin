@@ -35,7 +35,7 @@ const SINGLETON=class AbstractWidget {
         return $q.resolve();
     }
 
-    // This van be called before the doscument ready
+    // This can be called before the doscument ready
     // To initialize the widget.
     // Returns a promisse
     init(parent){

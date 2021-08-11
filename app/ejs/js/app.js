@@ -30,7 +30,8 @@ var INTERFACE={
 
         // Pages
         { name:"index",path:"./view/" },
-        { name:"data",path:"./services/" },
+        { name:"card-list",path:"./view/" },
+//         { name:"data",path:"./services/" },
 
         // Partals
         { name:"play-sound",path:"./partial/"},

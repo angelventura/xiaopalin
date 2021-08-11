@@ -14,7 +14,9 @@
   <div class="extra content">
     {{#each lang}}
     <div class="capitalize">
-      <i class="{{@key}} flag"></i> <i class="volume up icon play" data-id="{{id}}-{{@key}}" data-lang="{{@key}}"></i>{{this}}
+      <a class="play" data-id="{{../id}}-{{@key}}" >
+        <i class="{{@key}} flag"></i> <i class="volume up icon"></i>{{this}}
+      </a>
     </div>
     {{/each}}
   </div>

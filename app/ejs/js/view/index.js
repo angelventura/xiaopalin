@@ -2,7 +2,7 @@
  * This is the console entry point
  */
 'use strict';
-<% var currentName = "index"; %>
+<% const currentName = r.getFileId(__filename); %>
 <%- include('../snippet/js-head.ejs', {fileName: currentName+'.js'}); -%>
 
 var $ = require('jquery');
