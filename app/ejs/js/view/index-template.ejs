@@ -1,23 +1,25 @@
-<div class="row form ui">  
-  <h2>
-    >word-card this
-  </h2>
+<!-- Slider main container -->
+<div class="swiper-container" style="width:290px;height:100%;">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {{#each this}}
+    <div class="swiper-slide">
+      {{>word-card this}}
+    </div>
+    {{/each}}
+
+  </div>
+  <!-- If we need pagination 
+  <div class="swiper-pagination"></div>
+  -->
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar
+  <div class="swiper-scrollbar"></div>
+  -->
 </div>
+<!-- END Slider main container -->
 
-
-{{#each this}}
-{{>word-card this}}
-{{/each}}
-
-<div class="row form ui">  
-  <h2>
-    word-card this
-  </h2>
-</div>
-
-{{#each this}}
-{{{word-card this}}}
-{{/each}}
-
-
-{{>json-closeable}}

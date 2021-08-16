@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="<%= meta.LANG %>" id="<%= PAGE_ID %>" data-menu="<%= MENU_ID %>">
+
+  <head>
+    <%- include('./head.ejs') -%>
+    <%- include('./javascript-top.ejs') -%>
+  </head>
+  
+  <body class="">
+    
+    <%- include('./app-main-menu.ejs') -%>
+
+    <div id="content-wrapper" class="main container">
+      
+      <div class="row">
+
+        <%- include ('./app-vertical-left-menu.ejs')  -%>
+
+        <div id="view-wrapper" class="column">
+
+          <%- render.includeHtml(CONTENT,{PAGE_ID:PAGE_ID,MENU_ID:MENU_ID}); -%>
+          
+        </div>
+      </div>      
+    </div>
+    
+  </body>  
+</html>

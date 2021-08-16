@@ -26,6 +26,7 @@ var INTERFACE={
 };
 
 Register.registerModule(INTERFACE,"index",require('./view//index'));
+Register.registerModule(INTERFACE,"home",require('./view//home'));
 Register.registerModule(INTERFACE,"card-list",require('./view//card-list'));
 Register.registerModule(INTERFACE,"card-slider",require('./view//card-slider'));
 Register.registerModule(INTERFACE,"play-sound",require('./partial//play-sound'));

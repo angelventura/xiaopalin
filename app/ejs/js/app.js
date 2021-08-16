@@ -30,6 +30,7 @@ var INTERFACE={
 
         // Pages
         { name:"index",path:"./view/" },
+        { name:"home",path:"./view/" },
         { name:"card-list",path:"./view/" },
         { name:"card-slider",path:"./view/" },
 
