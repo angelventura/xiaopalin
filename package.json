@@ -107,6 +107,7 @@
     "q": "^1.5.1",
     "query-string-parser": "^0.1.4",
     "showdown": "^1.9.1",
-    "sortablejs": "^1.5.1"
+    "sortablejs": "^1.5.1",
+    "swiper": "^6.8.1"
   }
 }

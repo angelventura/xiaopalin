@@ -5,11 +5,11 @@
    mdfilename = __filename
    ;
    
-%><% include ('../templates/partials/page-header-reload.ejs') %>
+%><%- include ('../templates/partials/page-header-reload.ejs') %>
 
 <div class="ui column centered grid">
   <div class="twelve wide column">
-    <div id="<%- id -%>-content">Sparta</div>
+    <div id="<%- id -%>-content"><%- menu -%>/<%- id -%></div>
   </div>
   <div class="four wide column">
     <pre id="<%- id -%>-json"></pre>

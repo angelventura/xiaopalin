@@ -10,13 +10,13 @@ const $q = require('q');
 const moment = require('moment');
 const numeral = require('numeral');
 
-const log = require('./lib/log');
+const Log = require('./lib/log');
 const Errors = require('./lib/error');
 
 const Register = require('./lib/register-module');
 const Display = require('./lib/display');
 
-log.debug("Starting app ...");
+Log.debug("Starting app ...");
 
 var INTERFACE={
 	"init":[],
@@ -27,6 +27,7 @@ var INTERFACE={
 
 Register.registerModule(INTERFACE,"index",require('./view//index'));
 Register.registerModule(INTERFACE,"card-list",require('./view//card-list'));
+Register.registerModule(INTERFACE,"card-slider",require('./view//card-slider'));
 Register.registerModule(INTERFACE,"play-sound",require('./partial//play-sound'));
 Register.registerModule(INTERFACE,"xiao-partial",require('./partial//xiao-partial'));
 Register.registerModule(INTERFACE,"display-helpers",require('./lib/partial//display-helpers'));

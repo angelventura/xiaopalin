@@ -10,13 +10,13 @@ const $q = require('q');
 const moment = require('moment');
 const numeral = require('numeral');
 
-const log = require('./lib/log');
+const Log = require('./lib/log');
 const Errors = require('./lib/error');
 
 const Register = require('./lib/register-module');
 const Display = require('./lib/display');
 
-log.debug("Starting app ...");
+Log.debug("Starting app ...");
 
 var INTERFACE={
 	"init":[],
@@ -31,7 +31,7 @@ var INTERFACE={
         // Pages
         { name:"index",path:"./view/" },
         { name:"card-list",path:"./view/" },
-//         { name:"data",path:"./services/" },
+        { name:"card-slider",path:"./view/" },
 
         // Partals
         { name:"play-sound",path:"./partial/"},

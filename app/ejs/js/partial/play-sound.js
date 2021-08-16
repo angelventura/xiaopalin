@@ -22,6 +22,8 @@ const SINGLETON=class PlaySound extends AbstractPartial {
 
     initialize(){
         El.clickEvent(".play",(e)=>{
+            El.eventStop(e);
+
             const id=El.getDataId(e,null);
 
             this.play(id);

@@ -97,17 +97,13 @@ function task(cb) {
     gulp.src(['node_modules/showdown/dist/*.js'])
         .pipe(gulp.dest(config.distVendors + '/showdown'));
 
-    // js-tree
-    gulp.src(['node_modules/jstree/dist/**/*'])
-        .pipe(gulp.dest(config.distVendors + '/jstree'));
-
     // @fortawesome/fontawesome-free
     gulp.src(['node_modules/@fortawesome/fontawesome-free/**/*'])
         .pipe(gulp.dest(config.distVendors + '/fontawesome-free'));
 
-    // swagger-ui
-    gulp.src(['node_modules/swagger-ui/dist/**/*'])
-        .pipe(gulp.dest(config.distVendors + '/swagger-ui'));
+    // swiper
+    gulp.src(['node_modules/swiper/*'])
+        .pipe(gulp.dest(config.distVendors + '/swiper'));
 
     // JQUERY
     return gulp.src(['node_modules/jquery/dist/*'])

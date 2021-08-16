@@ -14,7 +14,9 @@ const Display = require('../lib/display');
 <%
 const TEMPLATES=[
  	"word-card",
+ 	"word-list",
  	"img-src", 
+
     
 ];%>
 

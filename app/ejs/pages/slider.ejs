@@ -1,0 +1,151 @@
+<% id = PAGE_ID,
+   menu = MENU_ID,
+   title= "Title",
+   subtitle = "subtitle.",
+   mdfilename = __filename
+   ;
+   
+%><%- include ('../templates/partials/page-header-reload.ejs') %>
+
+<style type="text/css">
+.swiper-container {
+  width: 290px;
+  height: 100%;
+}
+</style>
+
+<script type="module">
+import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  //  direction: 'vertical',
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+
+<!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      
+<!-- Card -->
+<div class="ui card">
+  <div class="image">
+    <img src="<%- meta.IMG_PATH %>/data/pengyou.png">
+  </div>
+  <div class="content">
+    <div class="ui header center-text huge">朋友</div>
+
+    <div class="ui meta center-text ">
+      <a> <i class="volume up icon"></i>Péngyǒu </a>
+    </div>
+
+  </div>
+  <div class="extra content">
+    <div>
+      <i class="es flag"></i> <i class="volume up icon"></i>  Amigo
+    </div>
+
+    <div>
+      <i class="fr flag"></i> <i class="volume up icon"></i> Ami
+    </div>
+
+  </div>
+</div>
+<!-- Card End -->
+
+
+
+    </div>
+    <div class="swiper-slide">
+
+<!-- Card -->
+<div class="ui card">
+  <div class="image">
+    <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
+  </div>
+  <div class="content">
+    <div class="ui header center-text huge">朋友</div>
+
+    <div class="ui meta center-text ">
+      <a> <i class="volume up icon"></i>Péngyǒu </a>
+    </div>
+
+  </div>
+  <div class="extra content">
+    <div>
+      <i class="es flag"></i> <i class="volume up icon"></i>  Amigo
+    </div>
+
+    <div>
+      <i class="fr flag"></i> <i class="volume up icon"></i> Ami
+    </div>
+
+  </div>
+</div>
+<!-- Card End -->
+
+    </div>
+    <div class="swiper-slide">
+
+<!-- Card -->
+<div class="ui card">
+  <div class="image">
+    <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+  </div>
+  <div class="content">
+    <div class="ui header center-text huge">朋友</div>
+
+    <div class="ui meta center-text ">
+      <a> <i class="volume up icon"></i>Péngyǒu </a>
+    </div>
+
+  </div>
+  <div class="extra content">
+    <div>
+      <i class="es flag"></i> <i class="volume up icon"></i>  Amigo
+    </div>
+
+    <div>
+      <i class="fr flag"></i> <i class="volume up icon"></i> Ami
+    </div>
+
+  </div>
+</div>
+<!-- Card End -->
+
+    </div>
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+

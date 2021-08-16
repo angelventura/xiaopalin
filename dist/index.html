@@ -22,6 +22,8 @@
 
 <title>Xiao Palin</title>
 
+<!-- swiper  -->
+<link href="./vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 <!-- Semantic-UI  -->
 <link href="./vendors/semantic-ui/semantic.css" rel="stylesheet">
@@ -39,6 +41,8 @@
 
 <script src="./vendors/moment/moment.min.js"></script>
 
+<!-- swiper  -->
+<link href="./vendors/swiper/swiper-bundle.min.js" rel="stylesheet">
 
 <!-- Main Javascript -->
 <script src="./js/bundle.js"></script>
@@ -62,9 +66,13 @@
 	
     <a href="/index.html" id="menu-index" class="inverted item ">Home</a>
 	
+    <a href="/card-list.html" id="menu-card-list" class="inverted item ">Card List</a>
+	
+    <a href="/card-slider.html" id="menu-card-slider" class="inverted item ">Card Slider</a>
+	
     <a href="/card.html" id="menu-card" class="inverted item ">Card</a>
 	
-    <a href="/card-list.html" id="menu-card-list" class="inverted item ">Card List</a>
+    <a href="/slider.html" id="menu-slider" class="inverted item ">Slider</a>
 	
 
 	<!-- Right Menu-->
@@ -136,6 +144,36 @@
 	  
 	  
 	<!-- partial.menu.js-->
+    <div class="ui vertical following fluid accordion menu" id="vertical-menu-card-list" style="display:none;">
+	  
+	  
+	  <a href="/card-list.html" class="active inverted item ">
+        Card List      </a>
+	  
+		
+		
+		
+		
+		
+      </div>
+	  
+	  
+	<!-- partial.menu.js-->
+    <div class="ui vertical following fluid accordion menu" id="vertical-menu-card-slider" style="display:none;">
+	  
+	  
+	  <a href="/card-slider.html" class="active inverted item ">
+        Card Slider      </a>
+	  
+		
+		
+		
+		
+		
+      </div>
+	  
+	  
+	<!-- partial.menu.js-->
     <div class="ui vertical following fluid accordion menu" id="vertical-menu-card" style="display:none;">
 	  
 	  
@@ -151,11 +189,11 @@
 	  
 	  
 	<!-- partial.menu.js-->
-    <div class="ui vertical following fluid accordion menu" id="vertical-menu-card-list" style="display:none;">
+    <div class="ui vertical following fluid accordion menu" id="vertical-menu-slider" style="display:none;">
 	  
 	  
-	  <a href="/card-list.html" class="active inverted item ">
-        Card List      </a>
+	  <a href="/slider.html" class="active inverted item ">
+        Slider      </a>
 	  
 		
 		
@@ -172,7 +210,7 @@
 
         <div id="view-wrapper" class="column">
 
-          <div class="ui column centered grid"><div class="twelve wide column"><div id="index-content">Sparta</div></div><div class="four wide column"><pre id="index-json"></pre></div></div>          
+          <div class="ui sixteen wide column secondary segment menu"><div class=""></div><div class="right menu"><div class="item"><div id="index-refresh-button" class="ui small positive labeled icon button"><i class="refresh icon"></i> Refresh</div></div></div></div><div class="ui column centered grid"><div class="twelve wide column"><div id="index-content">index/index</div></div><div class="four wide column"><pre id="index-json"></pre></div></div>          
         </div>
       </div>      
     </div>
